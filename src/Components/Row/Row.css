@@ -1,0 +1,61 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.row h2 {
+  margin-bottom: 10px;
+}
+
+.row-container {
+  position: relative;
+}
+
+.row-posters {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.poster {
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.large .poster {
+  width: 200px;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  position: absolute;
+  top: 40%;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.loading {
+  color: gray;
+}

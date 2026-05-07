@@ -1,0 +1,89 @@
+.title-cards {
+    margin-top: 50px;
+    padding-left: 0%;
+}
+
+/* TITLE */
+.title-cards h2 {
+    margin-bottom: 15px;
+}
+
+/* CARD LIST (UNCHANGED) */
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD (UNCHANGED) */
+.card {
+    position: relative;
+    min-width: 240px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.card p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+/* 🔥 WRAPPER (NO LAYOUT CHANGE) */
+.card-wrapper {
+    position: relative;
+}
+
+/* 🔥 ARROWS (DO NOT AFFECT LAYOUT) */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+/* MOVE LEFT ARROW OUTSIDE */
+.scroll-btn.left {
+    left: -30px;
+}
+
+/* RIGHT ARROW NORMAL */
+.scroll-btn.right {
+    right: 10px;
+}
+
+/* SHOW ONLY ON HOVER */
+.card-wrapper:hover .scroll-btn {
+    display: block;
+}
+
+/* MOBILE (UNCHANGED) */
+@media (max-width: 800px) {
+    .card {
+        min-width: 150px;
+    }
+}

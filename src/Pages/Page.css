@@ -1,0 +1,73 @@
+/* 🔥 MAIN PAGE CONTAINER */
+.page {
+  background-color: #141414;
+  min-height: 100vh;
+  color: #fff;
+  padding-top: 80px; /* space for navbar */
+}
+
+/* 🔥 PAGE TITLE */
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 20px 20px;
+  letter-spacing: 0.5px;
+}
+
+/* 🔥 ROW SPACING */
+.page .row {
+  margin-bottom: 30px;
+}
+
+/* 🔥 EMPTY STATE (My List etc.) */
+.empty-state {
+  text-align: center;
+  margin-top: 100px;
+  color: #888;
+  font-size: 18px;
+}
+
+/* 🔥 GRID (My List page layout) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🔥 MOVIE CARD */
+.card-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card-item p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.card-item:hover {
+  transform: scale(1.08);
+}
+
+/* 🔥 LOADING TEXT */
+.loading {
+  padding: 20px;
+  color: #aaa;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 22px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
